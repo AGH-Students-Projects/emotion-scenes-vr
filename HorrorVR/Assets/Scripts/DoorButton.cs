@@ -11,7 +11,12 @@ public class DoorButton : MonoBehaviour
         
         if (other.CompareTag("Hand"))
         {
-            StartCoroutine(door.openDoor());
+            OpenDoor();
         }
+    }
+
+    public void OpenDoor()
+    {
+        StartCoroutine(door.openDoor());
     }
 }
