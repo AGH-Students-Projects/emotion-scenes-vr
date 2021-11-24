@@ -6,8 +6,8 @@ public class RoomManager : MonoBehaviour
 {
     public static RoomManager instance;
 
-    private bool ifShouldSpawnRoom;
     [SerializeField] private GameObject[] rooms;
+    private GameObject roomToDestroy;
     private GameObject currentRoom;
     private GameObject newRoom;
     private Transform whereSpawnNewRoom;
@@ -15,7 +15,6 @@ public class RoomManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        ifShouldSpawnRoom = true;
     }
     // Start is called before the first frame update
     void Start()
@@ -31,9 +30,8 @@ public class RoomManager : MonoBehaviour
 
     public void spawnNewRoom(Transform roomPosition)
     {
-        
-            if (currentRoom != null) Destroy(currentRoom, 5f);
-            ifShouldSpawnRoom = false;
+        if (roomToDestroy != null) Destroy(roomToDestroy, 5f);
+            roomToDestroy = currentRoom;
             currentRoom = newRoom;
             newRoom = Instantiate(rooms[Random.Range(0, rooms.Length)], roomPosition.position, roomPosition.rotation);
 

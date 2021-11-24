@@ -37,8 +37,7 @@ public class DoorController : MonoBehaviour
 
             while(Vector3.Distance(door.transform.position, openPos.position) > 0.001f && isOpen)
             {
-                Debug.Log("opening2222222");
-                door.transform.position = Vector3.MoveTowards(door.transform.position, openPos.position, Time.deltaTime * speed);
+                door.transform.position = Vector3.MoveTowards(door.transform.position, openPos.position, speed);
                 yield return new WaitForSeconds(0.1f);
             }            
         }
@@ -53,7 +52,7 @@ public class DoorController : MonoBehaviour
 
             while (Vector3.Distance(door.transform.position, Vector3.zero) > 0.001f && !isOpen)
             {
-                door.transform.position = Vector3.MoveTowards(door.transform.position, initialPosition, Time.deltaTime * speed * 5);
+                door.transform.position = Vector3.MoveTowards(door.transform.position, initialPosition, speed * 5);
                 yield return new WaitForSeconds(0.1f);
             }            
         }

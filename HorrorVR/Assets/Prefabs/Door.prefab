@@ -125,7 +125,7 @@ MonoBehaviour:
   openPos: {fileID: 1724803978925146433}
   door: {fileID: 1723345042883187645}
   room: {fileID: 0}
-  speed: 5
+  speed: 0.02
   spawnRoom: 1
 --- !u!1 &1724803978925146432
 GameObject:
@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226433453338140, guid: dfbd2a9ad7cec8b479b530f65dc65161, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4226433453338140, guid: dfbd2a9ad7cec8b479b530f65dc65161, type: 3}
       propertyPath: m_LocalPosition.z
