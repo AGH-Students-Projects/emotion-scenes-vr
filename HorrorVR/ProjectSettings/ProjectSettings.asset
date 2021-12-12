@@ -146,6 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.HorrorVR
     Standalone: com.DefaultCompany.HorrorVR
   buildNumber:
     Standalone: 0

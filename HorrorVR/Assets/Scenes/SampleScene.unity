@@ -965,7 +965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
+  - {fileID: 5718479080875104459, guid: 83206e5608f0aab4f8be144ae4c95c1a, type: 3}
   - {fileID: 7069551851087668345, guid: 368dde23b9d1ffa48b880f5af9a2afdf, type: 3}
+  - {fileID: 6983519262943228641, guid: 66d55aab0b9a3854c9ce6007a52f87b2, type: 3}
   - {fileID: 9101959767591180160, guid: 5c554535e12461d48a001b6c281dff30, type: 3}
 --- !u!4 &746141710
 Transform:
@@ -1307,7 +1309,7 @@ GameObject:
   - component: {fileID: 971286283}
   - component: {fileID: 971286287}
   - component: {fileID: 971286286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XR Rig
   m_TagString: Hand
   m_Icon: {fileID: 0}
@@ -1355,7 +1357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971286282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1061169455}
@@ -2053,6 +2055,10 @@ PrefabInstance:
     - target: {fileID: 9159887533046564231, guid: e5cc7c652e4c596478da60701bb1c9d2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159887533666586321, guid: e5cc7c652e4c596478da60701bb1c9d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9159887533666586325, guid: e5cc7c652e4c596478da60701bb1c9d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
