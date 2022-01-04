@@ -15,11 +15,16 @@ public class CorridorBehaviour : MonoBehaviour
     private Vector3 leftInitPosition;
     private Vector3 rightInitPosition;
 
+    static int roomCounter = 0;
+    [SerializeField] int chanceToScare;
+
+
     // Start is called before the first frame update
     void Start()
     {
         leftInitPosition = leftWall.position;
         rightInitPosition = rightWall.position;
+        roomCounter++;
     }
 
     // Update is called once per frame
@@ -32,7 +37,14 @@ public class CorridorBehaviour : MonoBehaviour
     {
         if(other.CompareTag("Hand"))
         {
-            StartCoroutine(MoveWalls());
+            int x = Random.Range(0, chanceToScare);
+            Debug.Log("Counter: " + roomCounter + ", rand: " + x);
+            if (roomCounter > x)
+            {
+                StartCoroutine(MoveWalls());
+                roomCounter = 0;
+            }
+            GetComponent<BoxCollider>().enabled = false;           
         }
     }
 

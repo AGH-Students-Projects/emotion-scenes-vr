@@ -21,18 +21,15 @@ public class DoorController : MonoBehaviour
 
     public IEnumerator openDoor()
     {
-        Debug.Log("openDoorMethod");
 
         if (spawnRoom)
         {
-            Debug.Log("spawning");
             spawnRoom = false;
             RoomManager.instance.spawnNewRoom(this.transform);
         }
 
         if (!isOpen)
         {
-            Debug.Log("opening");
             isOpen = !isOpen;
 
             while(Vector3.Distance(door.transform.position, openPos.position) > 0.001f && isOpen)

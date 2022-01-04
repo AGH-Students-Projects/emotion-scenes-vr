@@ -9,6 +9,24 @@ public class ZombiePosition : MonoBehaviour
 
     bool isUp = true;
 
+    static int roomCounter = 0;
+    [SerializeField] int chanceToScare;
+
+    private void Start()
+    {
+        roomCounter++;
+        int x = Random.Range(0, chanceToScare);
+        Debug.Log("Counter: " + roomCounter + ", rand: " + x + ",init chance: " + chanceToScare);
+        if (roomCounter > x)
+        {
+            roomCounter = 0;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void MoveUp()
     {
         if (!isUp)

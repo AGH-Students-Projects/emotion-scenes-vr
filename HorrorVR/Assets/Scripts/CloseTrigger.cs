@@ -8,7 +8,6 @@ public class CloseTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.CompareTag("Hand"))
         {
             StartCoroutine(door.closeDoor());
